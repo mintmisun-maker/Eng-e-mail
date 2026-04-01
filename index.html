@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFTC Diplomatic Correspondence Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-text">KFTC<br>Global Cooperation</span>
+                </div>
+            </div>
+            <nav class="template-nav">
+                <ul id="template-list">
+                    <!-- Templates dynamically loaded here -->
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content (Input Form) -->
+        <main class="editor-section">
+            <header class="top-bar">
+                <h1 id="current-template-title">Select a Template</h1>
+                <p id="current-template-desc">Choose a drafting situation from the sidebar to begin.</p>
+            </header>
+
+            <div class="form-container" id="variables-form-container">
+                <!-- Dynamic form fields will be generated here -->
+                <div class="empty-state">
+                    Please select a template to view input fields.
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Panel (Live Preview) -->
+        <aside class="preview-section">
+            <div class="preview-header">
+                <h2>Draft Preview</h2>
+                <button id="copy-btn" class="btn-primary" disabled>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy to Clipboard
+                </button>
+            </div>
+            <div class="preview-content glass-panel" id="preview-output">
+                <!-- Live preview text appears here -->
+            </div>
+            <div id="copy-toast" class="toast hidden">Copied to clipboard!</div>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
